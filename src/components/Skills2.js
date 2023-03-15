@@ -1,4 +1,10 @@
-import meter1 from "../assets/img/meter1.svg";
+import leadership from "../assets/img/leadership.png";
+import comunication from "../assets/img/comunication.png";
+import proactive from "../assets/img/proactive.png";
+import teamwork from "../assets/img/teamwork.png";
+import scrum from "../assets/img/scrum.png";
+import emphaty from "../assets/img/emphaty.png";
+
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
@@ -38,43 +44,43 @@ export const Skills2 = () => {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={leadership} alt="Image" />
                                 <h5>LeaderShip</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={comunication} alt="Image" />
                                 <h5>Communicative</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={proactive} alt="Image" />
                                 <h5>Proactive</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={teamwork} alt="Image" />
                                 <h5>Teamwork</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={scrum} alt="Image" />
                                 <h5>SCRUM</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={emphaty} alt="Image" />
                                 <h5>Emphaty</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={leadership} alt="Image" />
                                 <h5>Autodidact</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={leadership} alt="Image" />
                                 <h5>Planning and Organization</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={leadership} alt="Image" />
                                 <h5>Figma</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={leadership} alt="Image" />
                                 <h5>SCRUM</h5>
                             </div>
                         
