@@ -358,7 +358,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
-  text-align: center;
+  text-align: justify;
   width: 56%;
 }
 .project .nav.nav-pills {
@@ -441,6 +441,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -451,12 +453,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  text-decoration: none;
+  color: white;
 }
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
+  text-decoration: none;
+  color: white;
 }
 .background-image-right {
   top: 20%;
