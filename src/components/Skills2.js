@@ -7,12 +7,9 @@ import emphaty from "../assets/img/emphaty.png";
 import autodidact from "../assets/img/autodidactic.png";
 import planning from "../assets/img/planning.png";
 
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills2 = () => {
@@ -43,7 +40,7 @@ export const Skills2 = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Soft Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>The main soft skills in which I excel are:<br></br> </p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={leadership} alt="Image" />
