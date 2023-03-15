@@ -4,6 +4,8 @@ import proactive from "../assets/img/proactive.png";
 import teamwork from "../assets/img/teamwork.png";
 import scrum from "../assets/img/scrum.png";
 import emphaty from "../assets/img/emphaty.png";
+import autodidact from "../assets/img/autodidactic.png";
+import planning from "../assets/img/planning.png";
 
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -68,21 +70,14 @@ export const Skills2 = () => {
                                 <h5>Emphaty</h5>
                             </div>
                             <div className="item">
-                                <img src={leadership} alt="Image" />
+                                <img src={autodidact} alt="Image" />
                                 <h5>Autodidact</h5>
                             </div>
                             <div className="item">
-                                <img src={leadership} alt="Image" />
+                                <img src={planning} alt="Image" />
                                 <h5>Planning and Organization</h5>
                             </div>
-                            <div className="item">
-                                <img src={leadership} alt="Image" />
-                                <h5>Figma</h5>
-                            </div>
-                            <div className="item">
-                                <img src={leadership} alt="Image" />
-                                <h5>SCRUM</h5>
-                            </div>
+                                                  
                         
                         </Carousel>
                     </div>
