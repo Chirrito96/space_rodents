@@ -10,7 +10,7 @@ app.use(cors({
   origin: 'https://portfolio-ossfit1.vercel.app'
 }));
 app.use(json());
-app.use("/", router);
+app.use("https://portfolio-api-one.vercel.app", router);
 const port=process.env.PORT || 5000;
 app.listen(port, () => console.log("Server Running"));
 
