@@ -7,10 +7,10 @@ import { createTransport } from "nodemailer";
 // server used to send send emails
 const app = express();
 app.use(cors({
-  origin: 'https://portfolio-api-one.vercel.app'
+  origin: 'https://portfolio-ossfit1.vercel.app/'
 }));
 app.use(json());
-app.use("/https://portfolio-api-one.vercel.app");
+app.use("/");
 const port=process.env.PORT || 5000;
 app.listen(port, () => console.log("Server Running"));
 
