@@ -10,7 +10,8 @@ app.use(cors({
   origin: 'https://portfolio-ossfit1.vercel.app/'
 }));
 app.use(json());
-app.use("/");
+app.get('/', (req, res) => res.send('Home Page Route'));
+
 const port=process.env.PORT || 5000;
 app.listen(port, () => console.log("Server Running"));
 
