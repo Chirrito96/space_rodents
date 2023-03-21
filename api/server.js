@@ -6,7 +6,9 @@ import { createTransport } from "nodemailer";
 
 // server used to send send emails
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://portfolio-ossfit1.vercel.app'
+}));
 app.use(json());
 app.use("/", router);
 const port=process.env.PORT || 5000;
