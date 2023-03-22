@@ -12,11 +12,10 @@ import css from "../assets/img/css.png";
 import tailwind from "../assets/img/tailwind.svg";
 
 
-import meter3 from "../assets/img/meter3.svg";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills1 = () => {
@@ -50,51 +49,51 @@ export const Skills1 = () => {
                         <p>The main technologies that I have used and know are: <br></br></p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={js} alt="Image" />
+                                <img src={js} alt="js" />
                                 <h5>Javascript</h5>
                             </div>
                             <div className="item">
-                                <img src={typescript} alt="Image" />
+                                <img src={typescript} alt="Ts" />
                                 <h5>Typescript</h5>
                             </div>
                             <div className="item">
-                                <img src={react} alt="Image" />
+                                <img src={react} alt="react" />
                                 <h5>React js</h5>
                             </div>
                             <div className="item">
-                                <img src={next} alt="Image" />
+                                <img src={next} alt="next" />
                                 <h5>Next js</h5>
                             </div>
                             <div className="item">
-                                <img src={redux} alt="Image" />
+                                <img src={redux} alt="redux" />
                                 <h5>Redux</h5>
                             </div>
                             <div className="item">
-                                <img src={express} alt="Image" />
+                                <img src={express} alt="express" />
                                 <h5>Express js</h5>
                             </div>
                             <div className="item">
-                                <img src={sequelize} alt="Image" />
+                                <img src={sequelize} alt="sql" />
                                 <h5>Sequelize</h5>
                             </div>
                             <div className="item">
-                                <img src={postgresql} alt="Image" />
+                                <img src={postgresql} alt="Psql" />
                                 <h5>PostgreSQL</h5>
                             </div>
                             <div className="item">
-                                <img src={figma} alt="Image" />
+                                <img src={figma} alt="figma" />
                                 <h5>Figma</h5>
                             </div>
                             <div className="item">
-                                <img src={github} alt="Image" />
+                                <img src={github} alt="gh" />
                                 <h5>GitHub</h5>
                             </div>
                             <div className="item">
-                                <img src={css} alt="Image" />
+                                <img src={css} alt="css" />
                                 <h5>CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={tailwind} alt="Image" />
+                                <img src={tailwind} alt="tw" />
                                 <h5>Tailwind</h5>
                             </div>
                         </Carousel>
@@ -102,7 +101,7 @@ export const Skills1 = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="BgImage" />
     </section>
   )
 }

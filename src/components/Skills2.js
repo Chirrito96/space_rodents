@@ -43,35 +43,35 @@ export const Skills2 = () => {
                         <p>The main soft skills in which I excel are:<br></br> </p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={leadership} alt="Image" />
+                                <img src={leadership} alt="ls" />
                                 <h5>LeaderShip</h5>
                             </div>
                             <div className="item">
-                                <img src={comunication} alt="Image" />
+                                <img src={comunication} alt="cm" />
                                 <h5>Communicative</h5>
                             </div>
                             <div className="item">
-                                <img src={proactive} alt="Image" />
+                                <img src={proactive} alt="pa" />
                                 <h5>Proactive</h5>
                             </div>
                             <div className="item">
-                                <img src={teamwork} alt="Image" />
+                                <img src={teamwork} alt="tw" />
                                 <h5>Teamwork</h5>
                             </div>
                             <div className="item">
-                                <img src={scrum} alt="Image" />
+                                <img src={scrum} alt="sc" />
                                 <h5>SCRUM</h5>
                             </div>
                             <div className="item">
-                                <img src={emphaty} alt="Image" />
+                                <img src={emphaty} alt="em" />
                                 <h5>Emphaty</h5>
                             </div>
                             <div className="item">
-                                <img src={autodidact} alt="Image" />
+                                <img src={autodidact} alt="ad" />
                                 <h5>Autodidact</h5>
                             </div>
                             <div className="item">
-                                <img src={planning} alt="Image" />
+                                <img src={planning} alt="pn" />
                                 <h5>Planning and Organization</h5>
                             </div>
                                                   
@@ -81,7 +81,7 @@ export const Skills2 = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="csp" />
     </section>
   )
 }
