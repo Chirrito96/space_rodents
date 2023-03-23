@@ -10,7 +10,9 @@ import cv from "../assets/cv.pdf"
 import { Document, Page, pdfjs } from "react-pdf";
 import { saveAs } from 'file-saver';
 import LinkedInCertifications from "./LinkedinCert";
+import MediaQuery from 'react-responsive';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 
 
 
@@ -97,13 +99,13 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Projects</Nav.Link>
+                        <Nav.Link eventKey="first"><span className="Cert">Projects</span></Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Certifications & courses </Nav.Link>
+                        <Nav.Link eventKey="second"><span className="Cert">Certifications</span> </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Resume</Nav.Link>
+                        <Nav.Link eventKey="third"><span className="Cert">Resume</span></Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -128,11 +130,14 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <div className="container d-grid align-items-center">
-
+                          <MediaQuery maxWidth={768}>
+                          {(matches) => (
                           <Document className="mx-auto" file={cv}>
 
-                            <Page scale={1.0} renderTextLayer={false} renderAnnotationLayer={false} pageNumber={1} />
-                          </Document>
+                           < Page className="page" scale={matches ? 0.5 : 1} renderTextLayer={false} renderAnnotationLayer={false} pageNumber={1} />
+                          </Document>)}
+                          </MediaQuery>
+                          
                           <button className="text-white btn btn-danger mt-3 mx-auto"onClick={downloadPdf}>Descargar PDF</button>
                         </div>
                        

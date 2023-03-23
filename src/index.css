@@ -16,3 +16,9 @@ code {
   border-radius:50%;
   box-shadow: 0 0 10px rgba(98, 168, 255, 0.5);
 }
+
+  @media (max-width: 576px) {
+    .Cert{
+   font-size: 0.7em
+  }
+}
