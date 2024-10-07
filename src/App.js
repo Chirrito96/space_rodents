@@ -6,6 +6,7 @@ import { Banner } from "./components/Banner";
 import { Footer } from "./components/Footer";
 import AboutUs from "./components/Projects";
 import ChatComponent from "./components/ChatComponent";
+import InfographyImage from "./components/InfographyImage"; // Importa el nuevo componente
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -18,6 +19,12 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
+
+      {/* Aquí el nuevo componente */}
+      <div id="infographic">
+        <InfographyImage />
+      </div>
+
       <div id="analysis" className="iframe-container">
         <iframe
           title="Rodent"
@@ -26,8 +33,8 @@ function App() {
           allowFullScreen="true"
         ></iframe>
       </div>
+
       <AboutUs />
-      {/* Contenedor para el iframe */}
 
       <button
         onClick={toggleChat}
@@ -37,7 +44,6 @@ function App() {
         {isChatOpen ? "Close Chat" : "Open chat"}
       </button>
 
-      {/* Componente del Chat con animación */}
       {isChatOpen && (
         <div
           className={`chat-container ${isChatOpen ? "slide-in" : "slide-out"}`}

@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import renatoImg from "../assets/img/renato.jpg"; // Importar la imagen local
-// import christianImg from "../assets/img/christian.jpg"; // Importar la imagen local
+import christianImg from "../assets/img/mark.jpeg"; // Importar la imagen local
 import oscarImg from "../assets/img/oscar.png"; // Importar la imagen local
 import martinImg from "../assets/img/martin.jpeg"; // Importar la imagen local
 import alexkaImg from "../assets/img/alexka.jpeg"; // Importar la imagen local
@@ -14,7 +14,7 @@ const AboutUs = () => {
     {
       name: "Crhistian Montenegro",
       profession: "Bachelor in Biotechnology",
-      imageUrl: "christianImg", // Asegúrate de importar correctamente esta imagen
+      imageUrl: christianImg, // Asegúrate de importar correctamente esta imagen
     },
     {
       name: "Renato Rojas Dominguez",
