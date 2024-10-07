@@ -25,7 +25,7 @@ export async function callGradio(question) {
       Evita jerga técnica compleja, no actúes como investigador y no inventes resultados específicos.
       Conecta el proyecto con beneficios cotidianos y mantén el misterio y la emoción de la exploración espacial.
       `,
-      max_length: 100,
+      max_length: 300,
     });
 
     console.log("Respuesta de Gradio recibida:", result.data); // Log de respuesta
