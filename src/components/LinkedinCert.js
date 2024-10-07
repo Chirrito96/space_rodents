@@ -6,8 +6,12 @@ function LinkedInCertifications({ certifications }) {
       <ul>
         {certifications.map((certification) => (
           <li key={certification.id}>
-            <a href={certification.credentialUrl}> <h3 className="lead">{certification.title}</h3></a><span className="small">{certification.authority}</span>
-<span className="small">-{certification.issued}</span>
+            <a href={certification.credentialUrl}>
+              {" "}
+              <h3 className="lead">{certification.title}</h3>
+            </a>
+            <span className="small">{certification.authority}</span>
+            <span className="small">-{certification.issued}</span>
           </li>
         ))}
       </ul>

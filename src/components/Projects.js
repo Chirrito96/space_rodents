@@ -1,155 +1,116 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/pokemon.jpg";
-import projImg2 from "../assets/img/rick.jpg";
-import projImg3 from "../assets/img/projImg3.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-import cv from "../assets/cv.pdf"
-import { Document, Page, pdfjs } from "react-pdf";
-import { saveAs } from 'file-saver';
-import LinkedInCertifications from "./LinkedinCert";
-import MediaQuery from 'react-responsive';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import renatoImg from "../assets/img/renato.jpg"; // Importar la imagen local
+// import christianImg from "../assets/img/christian.jpg"; // Importar la imagen local
+import oscarImg from "../assets/img/oscar.png"; // Importar la imagen local
+import martinImg from "../assets/img/martin.jpeg"; // Importar la imagen local
+import alexkaImg from "../assets/img/alexka.jpeg"; // Importar la imagen local
 
-
-
-
-
-export const Projects = () => {
-
-  const downloadPdf = () => {
-    const pdfUrl = '/cv.pdf';
-    const pdfName = 'Resume Oscar Alatrista';
-    saveAs(pdfUrl, pdfName);
-  }
-  const projects = [
+// Componente AboutUs
+const AboutUs = () => {
+  const teamMembers = [
     {
-      title: "Fit U App",
-      description: "Web app for coaches and individuals who want to acquire nutritional and training plans",
-      imgUrl: projImg3,
-      link: "https://final-henry-g6.netlify.app/"
+      name: "Crhistian Montenegro",
+      profession: "Bachelor in Biotechnology",
+      imageUrl: "christianImg", // Asegúrate de importar correctamente esta imagen
     },
     {
-      title: "Pokemon App",
-      description: "Web app that allows searching, creating, editing, and deleting (CRUD) Pokémon by utilizing the Pokémon API and a database.",
-      imgUrl: projImg1,
-      link: "https://pi-pokemon.pages.dev/"
+      name: "Renato Rojas Dominguez",
+      profession: "Bachelor in Biotechnology",
+      imageUrl: renatoImg,
     },
     {
-      title: "Rick & Morty App",
-      description: "Web app that allows searching for Rick & Morty characters by ID and adding them to the favorites section.",
-      imgUrl: projImg2,
-      link: "https://rick-and-morty-app.pages.dev/"
-    },
-  ];
-
-  const certifications = [
-    {
-      id: 1,
-      title: "Full Stack Developer",
-      authority: "Henry",
-      issued: "Mar 2023",
+      name: "Oscar Alatrista Zegarra",
+      profession: "Software Engineer",
+      imageUrl: oscarImg,
     },
     {
-      id: 2,
-      title:"EF SET English Certificate 62/100 (C1 Advanced)",
-      authority: "EF Standard English Test (EF SET) ",
-      issued: "Mar 2023",
-      credentialUrl: "https://www.efset.org/cert/V7eLK3"
+      name: "Martin Izaga",
+      profession: "Data Engineer",
+      imageUrl: martinImg,
     },
     {
-      id: 3,
-      title: "Google Analytics Certification",
-      authority: "Google Digital Academy (Skillshop)",
-      issued: "Mar 2023",
-      credentialUrl: "https://skillshop.credential.net/db4cab5c-a3c3-4fa7-b67c-8b01944e72c8"
+      name: "Alexka Mota Estela",
+      profession: "University student of Administration and Marketing",
+      imageUrl: alexkaImg,
     },
-    {
-      id: 4,
-      title: "Scrum Foundation Professional Certificate SFPC (v2020)",
-      authority: "CertiProf",
-      issued: "Mar 2023",
-      credentialUrl: "https://www.credly.com/badges/14f77acd-e262-434b-a595-505161778bd6/public_url"
-    },
-    {
-      id: 5,
-      title: "JavaScript Algorithms and Data Structures",
-      authority: "freeCodeCamp",
-      issued: "Oct 2022",
-      credentialUrl: "https://freecodecamp.org/certification/Oscar_Alatrista/javascript-algorithms-and-data-structures"
-    },
-    
   ];
 
   return (
-    <section className="project" id="projects">
+    <div
+      id="about"
+      style={{
+        padding: "50px 0",
+        textAlign: "center",
+        backgroundColor: "transparent",
+      }}
+    >
+      <h2 style={styles.title}>Meet our Team</h2>
       <Container>
         <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>About me</h2>
-                  <p>I am Oscar Alatrista Zegarra, a talented and committed Junior Full Stack Developer with soft skills such as effective communication, proactivity, teamwork, and empathy.
-                    <br></br>
-
-                    I could say a lot about life and how tough it is, but as I have been demonstrating, it doesn't matter how hard life hits you, but how willing you are to move forward despite it. My values training such as discipline, leadership, teamwork, and indomitable spirit commit me to continue in constant learning and continuous improvement in Tech and Soft Skills, being a great contribution to any organization that entrusts me with their confidence as a collaborator. You can contact me through my email oalatrista@gmail.com or through my LinkedIn profile at www.linkedin.com/in/oscar-alatrista. I am excited to apply my skills and knowledge to a Tech industry company.</p>
-                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                      <Nav.Item>
-                        <Nav.Link eventKey="first"><span className="Cert">Projects</span></Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="second"><span className="Cert">Certifications</span> </Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third"><span className="Cert">Resume</span></Nav.Link>
-                      </Nav.Item>
-                    </Nav>
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {
-                            projects.map((project, index) => {
-                              return (
-                                <ProjectCard
-                                  key={index}
-                                  {...project}
-                                />
-                              )
-                            })
-                          }
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="second">
-                        <div>
-                       <LinkedInCertifications certifications={certifications} />
-                       </div>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <div className="container d-grid align-items-center">
-                          <MediaQuery maxWidth={768}>
-                          {(matches) => (
-                          <Document className="mx-auto" file={cv}>
-
-                           < Page className="page" scale={matches ? 0.5 : 1} renderTextLayer={false} renderAnnotationLayer={false} pageNumber={1} />
-                          </Document>)}
-                          </MediaQuery>
-                          
-                          <button className="text-white btn btn-danger mt-3 mx-auto"onClick={downloadPdf}>Descargar PDF</button>
-                        </div>
-                       
-                      </Tab.Pane>
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>}
-            </TrackVisibility>
-          </Col>
+          {teamMembers.map((member, index) => (
+            <Col
+              xs={12}
+              md={4}
+              key={index}
+              className="d-flex justify-content-center align-items-center"
+            >
+              <TrackVisibility>
+                {({ isVisible }) => (
+                  <div
+                    className={
+                      isVisible ? "animate__animated animate__fadeInUp" : ""
+                    }
+                    style={styles.memberCard}
+                  >
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
+                      style={styles.image}
+                    />
+                    <h3 style={styles.name}>{member.name}</h3>
+                    <p style={styles.profession}>{member.profession}</p>
+                  </div>
+                )}
+              </TrackVisibility>
+            </Col>
+          ))}
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="bgir"></img>
-    </section>
-  )
-}
+    </div>
+  );
+};
+
+// Estilos en línea
+const styles = {
+  title: {
+    marginBottom: "20px",
+    color: "rgba(106, 27, 154, 0.8)",
+  },
+  memberCard: {
+    borderRadius: "8px",
+    padding: "10px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    color: "rgba(255, 255, 255, 0.8)",
+  },
+  image: {
+    width: "200px",
+    height: "200px",
+    borderRadius: "50%",
+    marginBottom: "10px",
+    objectFit: "cover",
+  },
+  name: {
+    margin: "0",
+    color: "rgba(255, 255, 255, 0.9)",
+  },
+  profession: {
+    margin: "0",
+    color: "rgba(255, 255, 255, 0.7)",
+  },
+};
+
+// Exportar el componente
+export default AboutUs;

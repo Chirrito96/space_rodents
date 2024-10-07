@@ -22,3 +22,36 @@ code {
    font-size: 0.7em
   }
 }
+
+.chat-container {
+  position: fixed;
+  bottom: 70px; /* Ajusta según el tamaño de tu botón */
+  right: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.slide-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateY(100%); /* Se mueve hacia abajo al cerrar */
+  opacity: 0;
+}
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: calc(100vh - /* altura de NavBar y Footer */ 200px); /* Ajusta este valor según la altura de tu Navbar y Footer */
+  padding: 20px; /* Añade padding si lo deseas */
+}
+
+.iframe-container iframe {
+  width: 100%; /* Ajusta el iframe al 100% del contenedor */
+  height: 100%; /* Ajusta la altura del iframe */
+  max-width: 800px; /* Puedes establecer un ancho máximo si lo deseas */
+  max-height: 600px; /* Puedes establecer una altura máxima si lo deseas */
+  border: none; /* Quita el borde */
+}
